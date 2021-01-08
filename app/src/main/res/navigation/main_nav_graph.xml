@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.pvcorazza.dynamicfeaturenavigationpoc.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_includedGraph"
+            app:destination="@id/feature_one_graph" />
+    </fragment>
+
+    <include-dynamic
+        android:id="@+id/feature_one_graph"
+        app:moduleName="feature_one"
+        app:graphResName="feature_one_nav_graph"
+        app:graphPackage="${applicationId}.feature_one" />
+
+</navigation>

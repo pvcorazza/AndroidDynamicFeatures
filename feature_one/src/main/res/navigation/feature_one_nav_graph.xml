@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/featureOneFragment">
+
+    <fragment
+        android:id="@+id/featureOneFragment"
+        android:name="com.pvcorazza.feature_one.FeatureOneFragment"
+        android:label="fragment_feature_one"
+        tools:layout="@layout/fragment_feature_one" >
+        <action
+            android:id="@+id/action_featureOneFragment_to_featureTwoFragment"
+            app:destination="@id/featureTwoFragment" />
+    </fragment>
+
+    <fragment
+        app:moduleName="feature_two"
+        android:id="@+id/featureTwoFragment"
+        android:name="com.pvcorazza.feature_two.FeatureTwoFragment"
+        android:label="fragment_feature_two"
+        />
+
+</navigation>
