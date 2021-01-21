@@ -2,11 +2,11 @@ include ':feature_two'
 setBinding(new Binding([gradle: this]))
 evaluate(new File(
   settingsDir,
-  '../flutter_module_example/.android/include_flutter.groovy'
+  './flutter_module_example/.android/include_flutter.groovy'
 ))
 include ':feature_one'
 include ':app'
 rootProject.name = "DynamicFeatureNavigationPoc"
 
 include ':flutter_module_example'
-project(':flutter_module_example').projectDir = new File('../flutter_module_example')
+project(':flutter_module_example').projectDir = new File('./flutter_module_example')
