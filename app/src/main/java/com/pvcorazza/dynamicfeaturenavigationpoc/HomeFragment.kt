@@ -1,11 +1,11 @@
 package com.pvcorazza.dynamicfeaturenavigationpoc
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
@@ -44,7 +44,12 @@ class HomeFragment : Fragment() {
 
         val button = view.findViewById<Button>(R.id.bt_feature_one)
         button.setOnClickListener {
-           findNavController().navigate(R.id.action_homeFragment_to_includedGraph)
+            findNavController().navigate(R.id.action_homeFragment_to_includedGraph)
+        }
+
+        val buttonFlutter = view.findViewById<Button>(R.id.bt_flutter)
+        buttonFlutter.setOnClickListener {
+            startActivity(io.flutter.embedding.android.FlutterActivity.createDefaultIntent(requireContext()))
         }
     }
 
